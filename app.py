@@ -30,7 +30,7 @@ def get_profile():
     json_data = get_answer_profile(name)
     return jsonify(json_data)
 
-@app.route('/KGQA_answer', methods=['GET', 'POST'])
+@app.route('/KGQA_answer', methods=['GET', 'POST'])  # 人物关系问答系统：贾宝玉的奶奶的儿子是谁？
 def KGQA_answer():
     question = request.args.get('name')
     json_data = get_KGQA_answer(get_target_array(str(question)))
